@@ -21,11 +21,11 @@ public class Airport {
     }
 
     public Plane getPlaneToFly(){
-        return planesToFly.peek();
+        return planesToFly.poll();
     }
 
     public Plane getPlaneToLand(){
-        return planesToLand.peek();
+        return planesToLand.poll();
     }
 
     public void registerPlaneToFly(Plane basePlane){
