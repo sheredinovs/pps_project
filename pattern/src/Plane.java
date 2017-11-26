@@ -4,4 +4,5 @@
 public interface Plane {
     void fly();
     void land();
+    String getName();
 }
