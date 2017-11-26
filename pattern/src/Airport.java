@@ -9,7 +9,7 @@ public class Airport {
     private Queue<Plane> planesToLand;
     private static Airport airport;
 
-    public Airport getInstance(){
+    public static Airport getInstance(){
         if(airport == null)
             airport = new Airport();
         return airport;
@@ -34,6 +34,11 @@ public class Airport {
 
     public void registerPlaneToLand(Plane basePlane){
         planesToLand.add(basePlane);
+    }
+
+    public void releaseAllResources(){
+        this.planesToLand.clear();
+        this.planesToFly.clear();
     }
 
 }
