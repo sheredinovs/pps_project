@@ -11,7 +11,7 @@ import java.util.Queue;
 public class LandCommonCommand implements AirPortCommonCommand {
     @Override
     public void execute(Airport airport) {
-        Queue<Plane> planeList = airport.getAllPlanesToFly();
+        Queue<Plane> planeList = airport.getAllPlanesToLand();
         if(planeList == null || planeList.isEmpty()){
             System.out.println("no planes to land");
             return;

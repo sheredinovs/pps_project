@@ -3,6 +3,8 @@ package airport;
 import command.AirPortCommonCommand;
 import command.AirPortServiceCommand;
 
+import java.util.List;
+
 /**
  * Created by kadyr on 21.11.2017.
  */
@@ -38,8 +40,8 @@ public class AirportDispatcher {
         this.commonCommand = commonCommand;
     }
 
-    public void executeService(){
-        command.execute(airport);
+    public void executeService(List<Plane> planes){
+        command.execute(airport,planes);
         executeCommon();
     }
 
